@@ -38,8 +38,11 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-4">
-                    <a href="#details" class="text-gray-600 hover:text-sky-600 px-3 py-2 rounded-md font-medium transition duration-150">ホワイト詳細</a>
+                    <!-- 項目名を「部活の特長」に修正 -->
+                    <a href="#details" class="text-gray-600 hover:text-sky-600 px-3 py-2 rounded-md font-medium transition duration-150">部活の特長</a>
                     <a href="#schedule" class="text-gray-600 hover:text-sky-600 px-3 py-2 rounded-md font-medium transition duration-150">スケジュール</a>
+                    <!-- 動画セクションへのリンクを追加 -->
+                    <a href="#video-showcase" class="text-gray-600 hover:text-sky-600 px-3 py-2 rounded-md font-medium transition duration-150">動画</a>
                     <a href="#members" class="text-gray-600 hover:text-sky-600 px-3 py-2 rounded-md font-medium transition duration-150">部員紹介</a>
                     <a href="#faq" class="text-gray-600 hover:text-sky-600 px-3 py-2 rounded-md font-medium transition duration-150">FAQ・問い合わせ</a>
                 </div>
@@ -61,8 +64,9 @@
                 東京海洋大学で「学業とテニス」のバランスを完璧に楽しむ場所。<br>多忙な大学生活を応援する、新しい形の硬式テニス部です。
             </p>
             <div class="space-y-4 sm:space-y-0 sm:space-x-4">
+                <!-- リンクの文言を「部活の特長を見る」に修正 -->
                 <a href="#details" class="inline-block bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
-                    私たちの「ゆるさ」を見る
+                    部活の特長を見る
                 </a>
                 <!-- 「体験・見学を申し込む」を「質問・相談をする」に修正 -->
                 <a href="#faq" class="inline-block bg-white border-2 border-sky-600 text-sky-600 font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:bg-sky-50">
@@ -72,7 +76,7 @@
         </div>
     </header>
 
-    <!-- 2. ホワイト詳細 Section -->
+    <!-- 2. 部活の特長 Section -->
     <section id="details" class="section-padding bg-white">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12">
@@ -163,8 +167,34 @@
         </div>
     </section>
 
-    <!-- 4. 部員紹介 Section (Placeholder for easy editing) -->
-    <section id="members" class="section-padding bg-white">
+    <!-- 4. Video Showcase Section (YouTube埋め込み) -->
+    <section id="video-showcase" class="section-padding bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+                実際の練習風景をチェック！
+            </h2>
+            <p class="text-lg text-gray-600 mb-10">
+                私たちのテニス部がどんな雰囲気なのか、動画で確認してみましょう。（※現在はサンプルの動画を埋め込んでいます）
+            </p>
+
+            <!-- Responsive Video Container (16:9 aspect ratio: padding-top 56.25% = 9/16) -->
+            <div class="relative pt-[56.25%] rounded-xl shadow-2xl overflow-hidden">
+                <iframe 
+                    class="absolute top-0 left-0 w-full h-full"
+                    <!-- 修正: 短縮URLから埋め込み専用URLに変更 -->
+                    src="https://www.youtube.com/embed/VACaANfwLHA" 
+                    title="YouTube video player placeholder" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. 部員紹介 Section (Placeholder for easy editing) -->
+    <section id="members" class="section-padding bg-sky-50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12">
                 個性と専門分野がバラバラな、最高の仲間たち。
@@ -175,7 +205,7 @@
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Member Card 1 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center transition duration-300 hover:shadow-xl">
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition duration-300 hover:shadow-xl">
                     <img src="https://placehold.co/120x120/dbeafe/1e3a8a?text=Member+A" alt="部員Aのプロフィール写真" class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-sky-200">
                     <h4 class="text-xl font-bold text-gray-800">泉　太 (Futoshi I.)</h4>
                     <p class="text-sm text-sky-600 font-semibold mb-3">食品生産科学科 2年</p>
@@ -186,7 +216,7 @@
                 </div>
                 
                 <!-- Member Card 2 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center transition duration-300 hover:shadow-xl">
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition duration-300 hover:shadow-xl">
                     <img src="https://placehold.co/120x120/fecaca/7f1d1d?text=Member+B" alt="部員Bのプロフィール写真" class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-sky-200">
                     <h4 class="text-xl font-bold text-gray-800">小倉　武(Takeru O.)</h4>
                     <p class="text-sm text-sky-600 font-semibold mb-3">海洋資源エネルギー学科 3年</p>
@@ -197,7 +227,7 @@
                 </div>
 
                 <!-- Member Card 3 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center transition duration-300 hover:shadow-xl">
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition duration-300 hover:shadow-xl">
                     <img src="https://placehold.co/120x120/bfdbfe/1e40af?text=Member+C" alt="部員Cのプロフィール写真" class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-sky-200">
                     <h4 class="text-xl font-bold text-gray-800">鈴木 健太 (Kenta S.)</h4>
                     <p class="text-sm text-sky-600 font-semibold mb-3">海洋政策文化学科 4年</p>
@@ -210,7 +240,7 @@
         </div>
     </section>
 
-    <!-- 5. FAQ & Contact Section -->
+    <!-- 6. FAQ & Contact Section -->
     <section id="faq" class="section-padding bg-sky-100">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12">
