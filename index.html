@@ -174,21 +174,27 @@
                 実際の練習風景をチェック！
             </h2>
             <p class="text-lg text-gray-600 mb-10">
-                私たちのテニス部がどんな雰囲気なのか、動画で確認してみましょう。（※現在はサンプルの動画を埋め込んでいます）
+                私たちのテニス部がどんな雰囲気なのか、**サムネイルをクリックしてYouTubeで確認してみましょう。**（※現在はサンプルの動画のサムネイルを表示しています）
             </p>
 
-            <!-- Responsive Video Container (16:9 aspect ratio: padding-top 56.25% = 9/16) -->
-            <div class="relative pt-[56.25%] rounded-xl shadow-2xl overflow-hidden">
-                <iframe 
-                    class="absolute top-0 left-0 w-full h-full"
-                    <!-- 修正: 短縮URLから埋め込み専用URLに変更 -->
-                    src="https://www.youtube.com/embed/VACaANfwLHA" 
-                    title="YouTube video player placeholder" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+            <!-- 修正: iframeを外し、サムネイル画像とリンクに置き換えました。
+                 これにより、埋め込みによるセキュリティエラーを回避します。 -->
+            <a href="https://www.youtube.com/embed/VACaANfwLHA" target="_blank" rel="noopener noreferrer" class="block rounded-xl shadow-2xl overflow-hidden relative group">
+                <!-- YouTubeのサムネイル画像を取得 (M7lc1UVf-VE はサンプル動画ID) -->
+                <img 
+                    src="https://i9.ytimg.com/vi_webp/VACaANfwLHA/maxresdefault.webp?v=69357150&sqp=CPDh1ckG&rs=AOn4CLBG0CWAqcLgX8vEj8ax4Isq6jHEFA" 
+                    alt="テニス部紹介動画のサムネイル" 
+                    class="w-full h-auto object-cover transition duration-300 group-hover:opacity-75"
+                    onerror="this.onerror=null; this.src='https://placehold.co/1280x720/e0f2f1/06b6d4?text=Video+Not+Available';"
+                >
+                <!-- 中央に再生ボタンのアイコンを配置 -->
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-100 group-hover:opacity-100 transition duration-300">
+                    <!-- Play Icon SVG (Tailwind Icon) -->
+                    <svg class="w-20 h-20 text-white fill-current opacity-90 group-hover:opacity-100 transition duration-300 transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 6V18L18 12L7 6Z" fill="currentColor"/>
+                    </svg>
+                </div>
+            </a>
 
         </div>
     </section>
